@@ -1945,6 +1945,7 @@ window.__ModuleLoader__.load({
               label: function () {
                 return tr("shortcut.open");
               },
+              aliases: ["find in conversation", "find in session"],
               defaults: defaultsFor({ code: "KeyF", modifiers: ["primary"] }),
               regions: ["page", "editable"],
               resolve: function (context) {
@@ -1958,6 +1959,7 @@ window.__ModuleLoader__.load({
               label: function () {
                 return tr("shortcut.global");
               },
+              aliases: ["find everywhere", "global find"],
               defaults: defaultsFor({ code: "KeyF", modifiers: ["primary", "shift"] }),
               regions: ["page", "editable"],
               resolve: function (context) {
@@ -1972,6 +1974,7 @@ window.__ModuleLoader__.load({
               label: function () {
                 return tr("shortcut.next");
               },
+              aliases: ["next match", "find next"],
               // F3 has no modifier, and the service rejects a default that has
               // none ("modifier-required"). Stay unbound here and step from the
               // page listener in (f) instead; users may still rebind these.
@@ -1987,6 +1990,7 @@ window.__ModuleLoader__.load({
               label: function () {
                 return tr("shortcut.prev");
               },
+              aliases: ["previous match", "find previous"],
               defaults: defaultsFor(null),
               regions: ["page", "editable"],
               resolve: function () {
